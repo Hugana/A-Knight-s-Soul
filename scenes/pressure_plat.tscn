@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvoyccmyrtkrg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwckn"]
+size = Vector2(3, 10)
+
+[node name="Pressure_plat" type="Sprite2D"]
+rotation = 1.5708
+region_enabled = true
+region_rect = Rect2(150, 3, 3, 10)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_gwckn")

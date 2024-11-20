@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://drcb460hrneiu"]
+
+[ext_resource type="Script" path="res://scripts/player_inverted.gd" id="1_yq6om"]
+[ext_resource type="Texture2D" uid="uid://bh4xdac3t8avx" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/knight_gray.png" id="2_sw4m5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur8ru"]
+atlas = ExtResource("2_sw4m5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7bpq"]
+atlas = ExtResource("2_sw4m5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8m234"]
+atlas = ExtResource("2_sw4m5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhxw7"]
+atlas = ExtResource("2_sw4m5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k3qeh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur8ru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7bpq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8m234")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhxw7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2haad"]
+size = Vector2(10, 15)
+
+[node name="player_inverted" type="CharacterBody2D"]
+script = ExtResource("1_yq6om")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 3.14159
+sprite_frames = SubResource("SpriteFrames_k3qeh")
+animation = &"idle"
+frame_progress = 0.951109
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_2haad")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://1xqo71q7j87j"]
+
+[ext_resource type="Texture2D" uid="uid://bvts34tdegih0" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin.png" id="1_sjct4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4duay"]
+size = Vector2(10, 3)
+
+[node name="pressure_plat" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1.5)
+rotation = 1.5708
+texture = ExtResource("1_sjct4")
+region_enabled = true
+region_rect = Rect2(150, 3, 3, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_4duay")
