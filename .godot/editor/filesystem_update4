@@ -1,1 +1,5 @@
 res://scenes/game.tscn
+res://scenes/platform.tscn
+res://scenes/Levels/game.tscn
+res://scenes/Interact/pressure_plat.tscn
+res://scenes/Interact/torh.tscn
