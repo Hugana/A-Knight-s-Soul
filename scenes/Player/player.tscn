@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://dx5i4louu1ayw"]
+[gd_scene load_steps=26 format=3 uid="uid://dx5i4louu1ayw"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_aea3k"]
 [ext_resource type="Texture2D" uid="uid://bbf8rxkp5r15c" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/knight.png" id="1_rsawr"]
+[ext_resource type="PackedScene" uid="uid://cof5tesjbv1gd" path="res://scenes/Player/player_dust.tscn" id="3_qcbq4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5qboj"]
 atlas = ExtResource("1_rsawr")
@@ -159,8 +160,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d5bya"]
 size = Vector2(8, 12)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("dust_particles")]
 script = ExtResource("1_aea3k")
+dust_particles = NodePath("AnimatedSprite2D/player_dust")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
@@ -168,6 +170,11 @@ sprite_frames = SubResource("SpriteFrames_uxs44")
 animation = &"run"
 autoplay = "idle"
 frame_progress = 0.962847
+
+[node name="player_dust" parent="AnimatedSprite2D" instance=ExtResource("3_qcbq4")]
+z_index = -1
+position = Vector2(-4, 11)
+color = Color(0.96223, 0.862221, 0.830683, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)

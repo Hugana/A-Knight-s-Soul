@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/torh.gd" id="1_kgj47"]
 
 [sub_resource type="Curve" id="Curve_7w8ka"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.983146, 0.263736), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0.571429), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="Torh" type="Node2D"]
@@ -17,7 +17,7 @@ explosiveness = 0.1
 emission_shape = 3
 emission_rect_extents = Vector2(0.5, 1)
 gravity = Vector2(0, -600)
-scale_amount_min = 2.0
-scale_amount_max = 3.0
+scale_amount_min = 4.0
+scale_amount_max = 5.0
 scale_amount_curve = SubResource("Curve_7w8ka")
 color = Color(1, 0, 0, 1)

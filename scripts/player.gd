@@ -3,7 +3,11 @@ extends CharacterBody2D
 const SPEED = 100.0
 const JUMP_VELOCITY = -250.0  # Negative for jumping upwards
 
+@export var dust_particles: CPUParticles2D
+
 @onready var animated_sprite = $AnimatedSprite2D
+
+
 
 const inversion = 1  
 
@@ -29,8 +33,17 @@ func _physics_process(delta: float) -> void:
 	
 	# Set horizontal velocity
 	if direction:
+		if is_on_floor():
+			dust_particles.emitting = true
+		else:
+			dust_particles.emitting = false
+		if(direction == 1):
+			dust_particles.direction = Vector2(1,0)
+		elif(direction == -1):
+			dust_particles.direction = Vector2(-1,0)
 		velocity.x = direction * SPEED
 	else:
+		dust_particles.emitting = false
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	# Move and slide, with floor normal adjusted by inversion
