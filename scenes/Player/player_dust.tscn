@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cof5tesjbv1gd"]
+[gd_scene load_steps=3 format=3 uid="uid://cof5tesjbv1gd"]
+
+[ext_resource type="Texture2D" uid="uid://cr1v8fxx0kdsq" path="res://assets/Particles/dust.png" id="1_2k58k"]
 
 [sub_resource type="Curve" id="Curve_48srh"]
 _data = [Vector2(0, 0.406337), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -6,15 +8,16 @@ point_count = 2
 
 [node name="CPUParticles2D" type="CPUParticles2D"]
 amount = 26
-lifetime = 0.6
+lifetime = 0.2
 speed_scale = 0.7
+texture = ExtResource("1_2k58k")
 direction = Vector2(-1, 0)
 spread = 13.88
 gravity = Vector2(0, -50)
 initial_velocity_min = 5.0
 initial_velocity_max = 20.0
-scale_amount_min = 4.0
-scale_amount_max = 4.0
+scale_amount_min = 0.2
+scale_amount_max = 0.8
 scale_amount_curve = SubResource("Curve_48srh")
 color = Color(0.892741, 0.644556, 0.566075, 1)
 hue_variation_max = 0.72

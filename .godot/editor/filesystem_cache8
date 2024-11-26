@@ -1,50 +1,55 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1732296776
-icon.svg::CompressedTexture2D::590505770272411424::1732101984::1732110421::1::::<><>::
-::res://assets/::1732295860
-Dungeon Tile Set Gray.png::CompressedTexture2D::6824608467707495481::1732101984::1732110421::1::::<><>::
-Dungeon Tile Set.png::CompressedTexture2D::7160238635917739647::1732101984::1732110421::1::::<><>::
-torch.png::CompressedTexture2D::8053293845438120805::1732295201::1732295202::1::::<><>::
-torch_gray.png::CompressedTexture2D::4543898399396670522::1732295852::1732295860::1::::<><>::
-::res://assets/brackeys_platformer_assets/::1732110384
-::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/::1732110384
-LICENSE & CREDITS.txt::TextFile::-1::1732101984::0::1::::<><>::
-::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/fonts/::1732110421
-PixelOperator8-Bold.ttf::FontFile::6611142714830504321::1732101984::1732110421::1::::<><>::
-PixelOperator8.ttf::FontFile::3670594942947456862::1732101984::1732110421::1::::<><>::
-::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/music/::1732110421
-time_for_adventure.mp3::AudioStreamMP3::1364050898942289987::1732101984::1732110421::1::::<><>::
-::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sounds/::1732110421
-coin.wav::AudioStreamWAV::6999213007874096588::1732101984::1732110421::1::::<><>::
-explosion.wav::AudioStreamWAV::8602448773645022426::1732101984::1732110421::1::::<><>::
-hurt.wav::AudioStreamWAV::2093705369501287958::1732101984::1732110421::1::::<><>::
-jump.wav::AudioStreamWAV::344107925894376271::1732101984::1732110421::1::::<><>::
-power_up.wav::AudioStreamWAV::4660108074260106257::1732101984::1732110421::1::::<><>::
-tap.wav::AudioStreamWAV::1082795483044729758::1732101984::1732110421::1::::<><>::
-::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/::1732198380
-coin.png::CompressedTexture2D::3900754038188385335::1732101984::1732110421::1::::<><>::
-coin_gray.png::CompressedTexture2D::7646051946815170454::1732198380::1732198380::1::::<><>::
-fruit.png::CompressedTexture2D::1956302695104840275::1732101984::1732110421::1::::<><>::
-knight.png::CompressedTexture2D::2468966659566527022::1732101984::1732110421::1::::<><>::
-knight_gray.png::CompressedTexture2D::2939011396630893465::1732101984::1732110421::1::::<><>::
-platforms.png::CompressedTexture2D::8410864068704529693::1732101984::1732110421::1::::<><>::
-slime_green.png::CompressedTexture2D::7771547255593465925::1732101984::1732110421::1::::<><>::
-slime_purple.png::CompressedTexture2D::4909303093738299351::1732101984::1732110421::1::::<><>::
-world_tileset.png::CompressedTexture2D::6765280619155137928::1732101984::1732110421::1::::<><>::
-::res://scenes/::1732297241
-::res://scenes/Asset_Scenes/::1732297241
-::res://scenes/Interact/::1732296798
-platform.tscn::PackedScene::8473659442986653280::1732296798::0::1::::<><>::uid://daaqc4l1liv64::::res://assets/Dungeon Tile Set.png
-pressure_plat.tscn::PackedScene::6277169276454204056::1732198633::0::1::::<><>::
-torh.tscn::PackedScene::3633261018642101502::1732296798::0::1::::<><>::res://scripts/torh.gd
-::res://scenes/Levels/::1732297065
-level_0.tscn::PackedScene::3853117632275190950::1732297249::0::1::::<><>::res://scripts/check_plat.gd<>uid://daaqc4l1liv64::::res://assets/Dungeon Tile Set.png<>uid://c4h5kl4f03xth::::res://assets/Dungeon Tile Set Gray.png<>uid://dx5i4louu1ayw::::res://scenes/Player/player.tscn<>uid://drcb460hrneiu::::res://scenes/Player/player_inverted.tscn<>uid://bvts34tdegih0::::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin.png<>uid://dg62mgm8rk3t7::::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin_gray.png<>uid://br08jpspexfas::::res://scenes/Interact/torh.tscn<>uid://dm0ctqorf7csj::::res://assets/torch.png<>uid://b50dlwic2tllq::::res://assets/torch_gray.png
-level_1.tscn::PackedScene::4234674423365151630::1732297249::0::1::::<><>::res://scripts/check_plat.gd<>uid://daaqc4l1liv64::::res://assets/Dungeon Tile Set.png<>uid://c4h5kl4f03xth::::res://assets/Dungeon Tile Set Gray.png<>uid://br08jpspexfas::::res://scenes/Interact/torh.tscn<>uid://dx5i4louu1ayw::::res://scenes/Player/player.tscn<>uid://dm0ctqorf7csj::::res://assets/torch.png<>uid://drcb460hrneiu::::res://scenes/Player/player_inverted.tscn<>uid://b50dlwic2tllq::::res://assets/torch_gray.png<>uid://bvts34tdegih0::::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin.png<>uid://dg62mgm8rk3t7::::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin_gray.png
-::res://scenes/Player/::1732198494
-player.tscn::PackedScene::8836074911661786326::1732101984::0::1::::<><>::res://scripts/player.gd<>uid://bbf8rxkp5r15c::::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/knight.png
-player_inverted.tscn::PackedScene::8356715320635228108::1732101984::0::1::::<><>::res://scripts/player_inverted.gd<>uid://bh4xdac3t8avx::::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/knight_gray.png
-::res://scripts/::1732296091
-check_plat.gd::GDScript::-1::1732101984::0::1::::<>Node2D<>::
-player.gd::GDScript::-1::1732101984::0::1::::<>CharacterBody2D<>::
-player_inverted.gd::GDScript::-1::1732101984::0::1::::<>CharacterBody2D<>::
-torh.gd::GDScript::-1::1732296091::0::1::::<>Node2D<>::
+::res://::1732657748
+icon.svg::CompressedTexture2D::590505770272411424::1732230393::1732633367::1::::<><>::
+::res://assets/::1732657478
+Dungeon Tile Set Gray.png::CompressedTexture2D::6824608467707495481::1732230393::1732633367::1::::<><>::
+Dungeon Tile Set.png::CompressedTexture2D::7160238635917739647::1732230393::1732633367::1::::<><>::
+Lava.png::CompressedTexture2D::1168569570821331522::1732657449::1732657478::1::::<><>::
+torch.png::CompressedTexture2D::8053293845438120805::1732633347::1732633367::1::::<><>::
+torch_gray.png::CompressedTexture2D::4543898399396670522::1732633347::1732633367::1::::<><>::
+::res://assets/brackeys_platformer_assets/::1732230393
+::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/::1732230393
+LICENSE & CREDITS.txt::TextFile::-1::1732230393::0::1::::<><>::
+::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/fonts/::1732633367
+PixelOperator8-Bold.ttf::FontFile::6611142714830504321::1732230393::1732633367::1::::<><>::
+PixelOperator8.ttf::FontFile::3670594942947456862::1732230393::1732633367::1::::<><>::
+::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/music/::1732633367
+time_for_adventure.mp3::AudioStreamMP3::1364050898942289987::1732230393::1732633367::1::::<><>::
+::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sounds/::1732633367
+coin.wav::AudioStreamWAV::6999213007874096588::1732230393::1732633367::1::::<><>::
+explosion.wav::AudioStreamWAV::8602448773645022426::1732230393::1732633367::1::::<><>::
+hurt.wav::AudioStreamWAV::2093705369501287958::1732230393::1732633367::1::::<><>::
+jump.wav::AudioStreamWAV::344107925894376271::1732230393::1732633367::1::::<><>::
+power_up.wav::AudioStreamWAV::4660108074260106257::1732230393::1732633367::1::::<><>::
+tap.wav::AudioStreamWAV::1082795483044729758::1732230393::1732633367::1::::<><>::
+::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/::1732633367
+coin.png::CompressedTexture2D::3900754038188385335::1732230393::1732633367::1::::<><>::
+coin_gray.png::CompressedTexture2D::7646051946815170454::1732230393::1732633367::1::::<><>::
+fruit.png::CompressedTexture2D::1956302695104840275::1732230393::1732633367::1::::<><>::
+knight.png::CompressedTexture2D::2468966659566527022::1732230393::1732633367::1::::<><>::
+knight_gray.png::CompressedTexture2D::2939011396630893465::1732230393::1732633367::1::::<><>::
+platforms.png::CompressedTexture2D::8410864068704529693::1732230393::1732633367::1::::<><>::
+slime_green.png::CompressedTexture2D::7771547255593465925::1732230393::1732633367::1::::<><>::
+slime_purple.png::CompressedTexture2D::4909303093738299351::1732230393::1732633367::1::::<><>::
+world_tileset.png::CompressedTexture2D::6765280619155137928::1732230393::1732633367::1::::<><>::
+::res://assets/Particles/::1732657794
+dust.png::CompressedTexture2D::6021059818111336704::1732657794::1732657798::1::::<><>::
+fire.png::CompressedTexture2D::7297421042841848370::1732634407::1732634409::1::::<><>::
+::res://scenes/::1732633347
+::res://scenes/Asset_Scenes/::1732635759
+platform.tscn::PackedScene::8473659442986653280::1732633347::0::1::::<><>::uid://daaqc4l1liv64::::res://assets/Dungeon Tile Set.png
+torh.tscn::PackedScene::3633261018642101502::1732635759::0::1::::<><>::res://scripts/torh.gd<>uid://db76pt6krpm8y::::res://assets/Particles/fire.png
+::res://scenes/Interact/::1732633347
+pressure_plat.tscn::PackedScene::6277169276454204056::1732230393::0::1::::<><>::
+::res://scenes/Levels/::1732635850
+level_0.tscn::PackedScene::3853117632275190950::1732635850::0::1::::<><>::res://scripts/check_plat.gd<>uid://daaqc4l1liv64::::res://assets/Dungeon Tile Set.png<>uid://c4h5kl4f03xth::::res://assets/Dungeon Tile Set Gray.png<>uid://dx5i4louu1ayw::::res://scenes/Player/player.tscn<>uid://drcb460hrneiu::::res://scenes/Player/player_inverted.tscn<>uid://bvts34tdegih0::::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin.png<>uid://dg62mgm8rk3t7::::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin_gray.png<>uid://br08jpspexfas::::res://scenes/Asset_Scenes/torh.tscn<>uid://dm0ctqorf7csj::::res://assets/torch.png<>uid://b50dlwic2tllq::::res://assets/torch_gray.png
+level_1.tscn::PackedScene::4234674423365151630::1732635759::0::1::::<><>::res://scripts/check_plat.gd<>uid://daaqc4l1liv64::::res://assets/Dungeon Tile Set.png<>uid://c4h5kl4f03xth::::res://assets/Dungeon Tile Set Gray.png<>uid://br08jpspexfas::::res://scenes/Asset_Scenes/torh.tscn<>uid://dx5i4louu1ayw::::res://scenes/Player/player.tscn<>uid://dm0ctqorf7csj::::res://assets/torch.png<>uid://drcb460hrneiu::::res://scenes/Player/player_inverted.tscn<>uid://b50dlwic2tllq::::res://assets/torch_gray.png<>uid://bvts34tdegih0::::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin.png<>uid://dg62mgm8rk3t7::::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin_gray.png
+::res://scenes/Player/::1732635759
+player.tscn::PackedScene::8836074911661786326::1732635759::0::1::::<><>::res://scripts/player.gd<>uid://bbf8rxkp5r15c::::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/knight.png<>uid://cof5tesjbv1gd::::res://scenes/Player/player_dust.tscn
+player_dust.tscn::PackedScene::5767662745267132175::1732635759::0::1::::<><>::
+player_inverted.tscn::PackedScene::8356715320635228108::1732635759::0::1::::<><>::res://scripts/player_inverted.gd<>uid://bh4xdac3t8avx::::res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/knight_gray.png
+::res://scripts/::1732633347
+check_plat.gd::GDScript::-1::1732230393::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1732633347::0::1::::<>CharacterBody2D<>::
+player_inverted.gd::GDScript::-1::1732230393::0::1::::<>CharacterBody2D<>::
+torh.gd::GDScript::-1::1732633347::0::1::::<>Node2D<>::

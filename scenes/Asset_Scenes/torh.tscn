@@ -1,23 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://br08jpspexfas"]
+[gd_scene load_steps=4 format=3 uid="uid://br08jpspexfas"]
 
 [ext_resource type="Script" path="res://scripts/torh.gd" id="1_kgj47"]
+[ext_resource type="Texture2D" uid="uid://db76pt6krpm8y" path="res://assets/Particles/fire.png" id="2_7dwya"]
 
 [sub_resource type="Curve" id="Curve_7w8ka"]
 _data = [Vector2(0, 0.571429), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="Torh" type="Node2D"]
+z_index = 9
 script = ExtResource("1_kgj47")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+z_index = 6
+rotation = 0.785398
 amount = 21
 lifetime = 0.2
 speed_scale = 0.2
 explosiveness = 0.1
+randomness = 1.0
+texture = ExtResource("2_7dwya")
 emission_shape = 3
-emission_rect_extents = Vector2(0.5, 1)
-gravity = Vector2(0, -600)
-scale_amount_min = 4.0
-scale_amount_max = 5.0
+emission_rect_extents = Vector2(0.5, 0.5)
+gravity = Vector2(0, -500)
+angular_velocity_min = 370.0
+angular_velocity_max = 370.0
+angle_min = -505.4
+angle_max = 366.9
+scale_amount_max = 1.5
 scale_amount_curve = SubResource("Curve_7w8ka")
 color = Color(1, 0, 0, 1)

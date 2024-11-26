@@ -161,6 +161,7 @@ animations = [{
 size = Vector2(8, 12)
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("dust_particles")]
+z_index = 50
 script = ExtResource("1_aea3k")
 dust_particles = NodePath("AnimatedSprite2D/player_dust")
 
