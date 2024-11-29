@@ -162,6 +162,7 @@ size = Vector2(8, 12)
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("dust_particles")]
 z_index = 50
+collision_mask = 3
 script = ExtResource("1_aea3k")
 dust_particles = NodePath("AnimatedSprite2D/player_dust")
 
@@ -174,7 +175,7 @@ frame_progress = 0.962847
 
 [node name="player_dust" parent="AnimatedSprite2D" instance=ExtResource("3_qcbq4")]
 z_index = -1
-position = Vector2(-4, 11)
+position = Vector2(0, 11)
 color = Color(0.96223, 0.862221, 0.830683, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

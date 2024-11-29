@@ -17,13 +17,13 @@ func _process(delta: float) -> void:
 		for body in area_1.get_overlapping_bodies():
 			if body is CharacterBody2D: 
 				is_in_area1 = true  # Update the global variable
-				print("Player is inside Area2D_1!")
+				print("1")
 
 	if area_2: 
 		for body in area_2.get_overlapping_bodies():
 			if body is CharacterBody2D:
 				is_in_area2 = true  # Update the global variable
-				print("Player is inside Area2D_2!")
+				print("2")
 				
 	# Check if both areas are occupied and the player presses the key
 	if is_in_area1 and is_in_area2:

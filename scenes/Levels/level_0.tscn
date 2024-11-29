@@ -336,6 +336,13 @@ script/source = "extends Camera2D
 @export var player1: NodePath
 @export var player2: NodePath
 
+# Minimum and maximum zoom levels
+@export var min_zoom: float = 1  # Closest zoom (smaller value means zoomed in)
+@export var max_zoom: float = 3  # Farthest zoom (larger value means zoomed out)
+
+# Distance scaling factor (adjust this to tweak the zoom behavior)
+@export var distance_factor: float = 500.0
+
 func _ready():
 	# Ensure the player references are valid
 	if not player1 or not player2:
@@ -353,8 +360,10 @@ func _process(delta: float) -> void:
 		# Calculate the distance between the players
 		var distance = p1.global_position.distance_to(p2.global_position)
 
-		# Adjust the zoom based on distance (tweak the multiplier as needed)
-		zoom = Vector2(1, 1) * clamp(distance / 2.0, 2.0, 2.0)
+		# Calculate the zoom inversely proportional to the distance
+		# The closer the players, the larger the zoom; the farther, the smaller the zoom
+		var zoom_value = lerp(max_zoom, min_zoom, clamp(distance / distance_factor, 0.0, 1.0))
+		zoom = Vector2(zoom_value, zoom_value)
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jh18x"]
@@ -374,7 +383,7 @@ layer_0/tile_data = PackedInt32Array(65534, 131072, 1, 65535, 131072, 1, 0, 1310
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -5)
-zoom = Vector2(3, 3)
+zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 script = SubResource("GDScript_0a0s0")
 player1 = NodePath("../Players/Player")
@@ -427,6 +436,8 @@ flip_v = true
 [node name="pressure_2" type="Area2D" parent="PresurePlates"]
 position = Vector2(109, -21)
 rotation = 3.14159
+collision_layer = 3
+collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="PresurePlates/pressure_2"]
 position = Vector2(0, -19)
@@ -441,6 +452,8 @@ shape = SubResource("RectangleShape2D_jh18x")
 
 [node name="pressure_1" type="Area2D" parent="PresurePlates"]
 position = Vector2(-92, 51)
+collision_layer = 3
+collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="PresurePlates/pressure_1"]
 position = Vector2(0, -19)
