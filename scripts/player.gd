@@ -5,6 +5,7 @@ const JUMP_VELOCITY = -250.0  # Negative for jumping upwards
 
 @export var dust_particles: CPUParticles2D
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var jump_sound = $Jump_Sound
 
 @export var inversion = 1  
 
@@ -15,6 +16,8 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump (direction depends on inversion)
 	if Input.is_action_just_pressed("jump") and (is_on_floor() or is_on_ceiling()) :
+		if jump_sound:
+			jump_sound.play()
 		velocity.y = JUMP_VELOCITY * inversion  # Inverted jump direction if necessary
 
 	# Handle horizontal movement
@@ -48,8 +51,8 @@ func _physics_process(delta: float) -> void:
 	
 func animations(direction):
 		
-	if direction == 0:
+	if direction == 0 and (is_on_ceiling() or is_on_floor()):
 		animated_sprite.play("idle")
-	if direction != 0:
+	if direction != 0 and (is_on_ceiling() or is_on_floor()):
 		animated_sprite.play("run")
 	

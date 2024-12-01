@@ -1,4 +1,9 @@
+Panel
+ParallaxBackground
+TextureRect
+Sprite2D
+AudioStreamPlayer2D
+Camera2D
 CPUParticles2D
 Node
-Sprite2D
 GPUParticles2D

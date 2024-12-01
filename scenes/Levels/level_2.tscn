@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://hs2h18ynnjfd"]
+[gd_scene load_steps=16 format=3 uid="uid://hs2h18ynnjfd"]
 
 [ext_resource type="Script" path="res://scripts/check_plat.gd" id="1_uo1iu"]
 [ext_resource type="Texture2D" uid="uid://qwcf1vwpu4ne" path="res://assets/Lava.png" id="2_i2g0f"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dg62mgm8rk3t7" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin_gray.png" id="8_pe28f"]
 [ext_resource type="PackedScene" uid="uid://dx5i4louu1ayw" path="res://scenes/Player/player.tscn" id="9_i2yn8"]
 [ext_resource type="PackedScene" uid="uid://drcb460hrneiu" path="res://scenes/Player/player_inverted.tscn" id="10_eqwvy"]
+[ext_resource type="PackedScene" uid="uid://2hugdn38purv" path="res://scenes/Player/camera.tscn" id="11_843hx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jlum"]
 texture = ExtResource("2_i2g0f")
@@ -427,3 +428,8 @@ position = Vector2(-76, -6)
 z_index = 20
 position = Vector2(-76, 44)
 inversion = 1
+
+[node name="Camera2D" parent="." instance=ExtResource("11_843hx")]
+position = Vector2(4, 49)
+player1 = NodePath("../Players/Player")
+player2 = NodePath("../Players/player_inverted")
