@@ -1,0 +1,6 @@
+res://scenes/Levels/level_0.tscn
+res://scenes/Levels/level_2.tscn
+res://scenes/main_menu.tscn
+res://scenes/music_player.gd
+res://scenes/Interfaces/main_menu.tscn
+res://scenes/Interfaces/main_menu.gd
