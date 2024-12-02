@@ -162,6 +162,7 @@ size = Vector2(8, 12)
 
 [node name="player_inverted" type="CharacterBody2D" node_paths=PackedStringArray("dust_particles")]
 collision_layer = 2
+collision_mask = 9
 script = ExtResource("1_k0264")
 dust_particles = NodePath("AnimatedSprite2D/CPUParticles2D")
 inversion = -1

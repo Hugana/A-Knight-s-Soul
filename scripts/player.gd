@@ -31,6 +31,12 @@ func _physics_process(delta: float) -> void:
 	
 	animations(direction)
 	
+	# Detect collisions
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		if collision.collider.is_in_group("collision_tileset"):
+			print("Collided with a tile!")
+	
 	# Set horizontal velocity
 	if direction:
 		if is_on_floor() or is_on_ceiling():
