@@ -1,3 +1,7 @@
+CollisionShape2D
+Sprite2D
+RigidBody2D
+TileMap
 Button
 TextEdit
 AudioStreamPlayer2D
@@ -9,6 +13,3 @@ CenterContainer
 Panel
 ParallaxBackground
 TextureRect
-Sprite2D
-Camera2D
-CPUParticles2D

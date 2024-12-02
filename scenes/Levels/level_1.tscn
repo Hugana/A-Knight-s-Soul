@@ -338,6 +338,7 @@ size = Vector2(10, 3)
 script = ExtResource("1_pho6m")
 area_1 = NodePath("PresurePlates/pressure_1")
 area_2 = NodePath("PresurePlates/pressure_2")
+next_scene_path = "res://scenes/Levels/level_2.tscn"
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(0, -1)
@@ -367,7 +368,7 @@ flip_h = true
 [node name="Torh_3" parent="Torches" instance=ExtResource("4_5h057")]
 z_index = 5
 position = Vector2(-123, 68)
-particle_color = Color(0.398642, 0.587427, 1, 1)
+particle_color = Color(0, 0, 1, 1)
 gravity_strength = 600
 
 [node name="Sprite2D" type="Sprite2D" parent="Torches/Torh_3"]
@@ -378,7 +379,7 @@ flip_v = true
 [node name="Torh_4" parent="Torches" instance=ExtResource("4_5h057")]
 z_index = 5
 position = Vector2(139, 68)
-particle_color = Color(0.398642, 0.587427, 1, 1)
+particle_color = Color(0, 0, 1, 1)
 gravity_strength = 600
 
 [node name="Sprite2D" type="Sprite2D" parent="Torches/Torh_4"]
@@ -392,6 +393,8 @@ flip_v = true
 [node name="pressure_2" type="Area2D" parent="PresurePlates"]
 position = Vector2(56, -85)
 rotation = 3.14159
+collision_layer = 3
+collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="PresurePlates/pressure_2"]
 position = Vector2(0, -19)
@@ -406,6 +409,8 @@ shape = SubResource("RectangleShape2D_jh18x")
 
 [node name="pressure_1" type="Area2D" parent="PresurePlates"]
 position = Vector2(105, 66)
+collision_layer = 3
+collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="PresurePlates/pressure_1"]
 position = Vector2(0, -19)

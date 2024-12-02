@@ -1,19 +1,20 @@
-[gd_scene load_steps=16 format=3 uid="uid://bu5qjw3i33lry"]
+[gd_scene load_steps=17 format=3 uid="uid://oehn3ulhiy8p"]
 
-[ext_resource type="Script" path="res://scripts/check_plat.gd" id="1_b0xkm"]
-[ext_resource type="Texture2D" uid="uid://daaqc4l1liv64" path="res://assets/Dungeon Tile Set.png" id="2_44s0i"]
-[ext_resource type="Texture2D" uid="uid://c4h5kl4f03xth" path="res://assets/Dungeon Tile Set Gray.png" id="3_23syu"]
-[ext_resource type="PackedScene" uid="uid://dx5i4louu1ayw" path="res://scenes/Player/player.tscn" id="4_x0qqw"]
-[ext_resource type="PackedScene" uid="uid://drcb460hrneiu" path="res://scenes/Player/player_inverted.tscn" id="5_1sh1a"]
-[ext_resource type="Texture2D" uid="uid://bvts34tdegih0" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin.png" id="6_oc38g"]
-[ext_resource type="Texture2D" uid="uid://dg62mgm8rk3t7" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin_gray.png" id="7_1b7fm"]
-[ext_resource type="PackedScene" uid="uid://br08jpspexfas" path="res://scenes/Asset_Scenes/torh.tscn" id="8_j645c"]
-[ext_resource type="Texture2D" uid="uid://dm0ctqorf7csj" path="res://assets/torch.png" id="9_1y4tu"]
-[ext_resource type="Texture2D" uid="uid://b50dlwic2tllq" path="res://assets/torch_gray.png" id="10_vo1w6"]
-[ext_resource type="PackedScene" uid="uid://2hugdn38purv" path="res://scenes/Player/camera.tscn" id="11_0gji6"]
+[ext_resource type="Script" path="res://scripts/check_plat.gd" id="1_4vaqi"]
+[ext_resource type="Texture2D" uid="uid://c4h5kl4f03xth" path="res://assets/Dungeon Tile Set Gray.png" id="3_kop6f"]
+[ext_resource type="Texture2D" uid="uid://daaqc4l1liv64" path="res://assets/Dungeon Tile Set.png" id="4_fxxww"]
+[ext_resource type="PackedScene" uid="uid://br08jpspexfas" path="res://scenes/Asset_Scenes/torh.tscn" id="5_nl6ix"]
+[ext_resource type="Texture2D" uid="uid://dm0ctqorf7csj" path="res://assets/torch.png" id="6_21t1y"]
+[ext_resource type="Texture2D" uid="uid://b50dlwic2tllq" path="res://assets/torch_gray.png" id="7_wmnin"]
+[ext_resource type="Texture2D" uid="uid://bvts34tdegih0" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin.png" id="8_7pwgk"]
+[ext_resource type="Texture2D" uid="uid://dg62mgm8rk3t7" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin_gray.png" id="9_vpwky"]
+[ext_resource type="PackedScene" uid="uid://dx5i4louu1ayw" path="res://scenes/Player/player.tscn" id="10_r6wfa"]
+[ext_resource type="PackedScene" uid="uid://drcb460hrneiu" path="res://scenes/Player/player_inverted.tscn" id="11_aqga5"]
+[ext_resource type="PackedScene" uid="uid://0ep5o52nbpxh" path="res://scenes/Interact/box.tscn" id="12_ddb0u"]
+[ext_resource type="PackedScene" uid="uid://2hugdn38purv" path="res://scenes/Player/camera.tscn" id="12_q31m0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jlum"]
-texture = ExtResource("2_44s0i")
+texture = ExtResource("4_fxxww")
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -1.89316, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
@@ -170,7 +171,7 @@ texture = ExtResource("2_44s0i")
 10:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8jxld"]
-texture = ExtResource("3_23syu")
+texture = ExtResource("3_kop6f")
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
@@ -334,7 +335,7 @@ sources/1 = SubResource("TileSetAtlasSource_8jxld")
 size = Vector2(10, 3)
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("area_1", "area_2")]
-script = ExtResource("1_b0xkm")
+script = ExtResource("1_4vaqi")
 area_1 = NodePath("PresurePlates/pressure_1")
 area_2 = NodePath("PresurePlates/pressure_2")
 next_scene_path = "res://scenes/Levels/level_1.tscn"
@@ -347,42 +348,42 @@ layer_0/tile_data = PackedInt32Array(65534, 131072, 1, 65535, 131072, 1, 0, 1310
 
 [node name="Torches" type="Node" parent="."]
 
-[node name="Torh_1" parent="Torches" instance=ExtResource("8_j645c")]
+[node name="Torh_1" parent="Torches" instance=ExtResource("5_nl6ix")]
 z_index = 0
 position = Vector2(-123, -39)
 
 [node name="Sprite2D" type="Sprite2D" parent="Torches/Torh_1"]
-texture = ExtResource("9_1y4tu")
+texture = ExtResource("6_21t1y")
 offset = Vector2(3, 2.5)
 
-[node name="Torh_2" parent="Torches" instance=ExtResource("8_j645c")]
+[node name="Torh_2" parent="Torches" instance=ExtResource("5_nl6ix")]
 z_index = 0
 position = Vector2(139, -39)
 
 [node name="Sprite2D" type="Sprite2D" parent="Torches/Torh_2"]
-texture = ExtResource("9_1y4tu")
+texture = ExtResource("6_21t1y")
 offset = Vector2(-3, 2.5)
 flip_h = true
 
-[node name="Torh_3" parent="Torches" instance=ExtResource("8_j645c")]
+[node name="Torh_3" parent="Torches" instance=ExtResource("5_nl6ix")]
 z_index = 0
 position = Vector2(-123, 68)
 particle_color = Color(0, 0, 1, 1)
 gravity_strength = 600
 
 [node name="Sprite2D" type="Sprite2D" parent="Torches/Torh_3"]
-texture = ExtResource("10_vo1w6")
+texture = ExtResource("7_wmnin")
 offset = Vector2(3, -2)
 flip_v = true
 
-[node name="Torh_4" parent="Torches" instance=ExtResource("8_j645c")]
+[node name="Torh_4" parent="Torches" instance=ExtResource("5_nl6ix")]
 z_index = 0
 position = Vector2(139, 68)
 particle_color = Color(0, 0, 1, 1)
 gravity_strength = 600
 
 [node name="Sprite2D" type="Sprite2D" parent="Torches/Torh_4"]
-texture = ExtResource("10_vo1w6")
+texture = ExtResource("7_wmnin")
 offset = Vector2(-3, -2)
 flip_h = true
 flip_v = true
@@ -398,7 +399,7 @@ collision_mask = 3
 [node name="Sprite2D" type="Sprite2D" parent="PresurePlates/pressure_2"]
 position = Vector2(0, -19)
 rotation = -1.5708
-texture = ExtResource("6_oc38g")
+texture = ExtResource("8_7pwgk")
 region_enabled = true
 region_rect = Rect2(150, 3, 3, 10)
 
@@ -414,7 +415,7 @@ collision_mask = 3
 [node name="Sprite2D" type="Sprite2D" parent="PresurePlates/pressure_1"]
 position = Vector2(0, -19)
 rotation = -1.5708
-texture = ExtResource("7_1b7fm")
+texture = ExtResource("9_vpwky")
 region_enabled = true
 region_rect = Rect2(150, 3, 3, 10)
 
@@ -424,15 +425,19 @@ shape = SubResource("RectangleShape2D_jh18x")
 
 [node name="Players" type="Node" parent="."]
 
-[node name="Player" parent="Players" instance=ExtResource("4_x0qqw")]
+[node name="Player" parent="Players" instance=ExtResource("10_r6wfa")]
 z_index = 6
 position = Vector2(10, -6)
 
-[node name="player_inverted" parent="Players" instance=ExtResource("5_1sh1a")]
+[node name="player_inverted" parent="Players" instance=ExtResource("11_aqga5")]
 z_index = 6
 position = Vector2(10, 46)
 
-[node name="Camera2D" parent="." instance=ExtResource("11_0gji6")]
+[node name="Camera2D" parent="." instance=ExtResource("12_q31m0")]
 position = Vector2(-5, 20)
 player1 = NodePath("../Players/Player")
 player2 = NodePath("../Players/player_inverted")
+
+[node name="Box" parent="." instance=ExtResource("12_ddb0u")]
+position = Vector2(-66, -8)
+mass = 0.001

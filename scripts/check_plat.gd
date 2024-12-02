@@ -2,7 +2,7 @@ extends Node2D
 
 @export var area_1: Area2D
 @export var area_2: Area2D
-@export var next_scene_path = "res://scenes/game_2.tscn"
+@export var next_scene_path = "text"
 
 var is_in_area1 = false
 var is_in_area2 = false

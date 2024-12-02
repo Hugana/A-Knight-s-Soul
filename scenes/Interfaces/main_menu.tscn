@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bfyunt4inngm2"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_1nkyx"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_x5s4n"]
 [ext_resource type="Texture2D" uid="uid://crgoyjk0vf3wh" path="res://Knighs_Soul_wallpaper.png" id="2_j3tpl"]
 [ext_resource type="FontFile" uid="uid://dbepmpin73w7n" path="res://assets/fonts/PixelatedEleganceRegular-ovyAA.ttf" id="3_t3e3r"]
 [ext_resource type="Script" path="res://scenes/music_player.gd" id="4_m2a22"]
@@ -15,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1nkyx")
+script = ExtResource("1_x5s4n")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 volume_db = -12.0
@@ -135,12 +135,14 @@ grow_vertical = 0
 [node name="FullScreen" type="Button" parent="Options"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_t3e3r")
 text = "Fullscreen"
 
 [node name="Options_back" type="Button" parent="Options"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_t3e3r")
 text = "Back"
 
 [connection signal="pressed" from="Main/New Game" to="." method="_on_new_game_pressed"]

@@ -4,3 +4,9 @@ res://scenes/main_menu.tscn
 res://scenes/music_player.gd
 res://scenes/Interfaces/main_menu.tscn
 res://scenes/Interfaces/main_menu.gd
+res://scenes/Levels/level_1.tscn
+res://scenes/Levels/main_menu.tscn
+res://scripts/check_plat.gd
+res://scenes/Levels/level_3.tscn
+res://scenes/Interact/box.tscn
+res://scripts/player.gd
