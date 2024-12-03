@@ -5,6 +5,7 @@ const JUMP_VELOCITY = -250.0  # Negative for jumping upwards
 
 var isDead = false
 
+@export var deathLabel: Label
 @export var dust_particles: CPUParticles2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var jump_sound = $Jump_Sound
@@ -65,15 +66,13 @@ func animations(direction):
 	elif direction != 0 and (is_on_ceiling() or is_on_floor()):
 		animated_sprite.play("run")
 
-	
-
-
-	
-
-
 func _on_player_inverted_body_entered(body: Node2D) -> void:
 	if body.is_in_group("collision_tilemap"):
 		isDead = true
+		
+		if deathLabel:  # Ensure deathLabel is assigned
+			deathLabel.visible = true  # Make the label visible
+		
 		animated_sprite.stop()  # Stop the current animation
 		animated_sprite.play("death")  # Play the death animation
 		print("PLAYER INVERTED Collided with a TileMap in TileGroup!")
@@ -82,6 +81,10 @@ func _on_player_inverted_body_entered(body: Node2D) -> void:
 func _on_player_normal_body_entered(body: Node2D) -> void:
 	if body.is_in_group("collision_tilemap"):
 		isDead = true
+		
+		if deathLabel:  # Ensure deathLabel is assigned
+			deathLabel.visible = true  # Make the label visible
+		
 		animated_sprite.stop()  # Stop the current animation
 		animated_sprite.play("death")  # Play the death animation
 		print("PLAYER NORMAL Collided with a TileMap in TileGroup!")

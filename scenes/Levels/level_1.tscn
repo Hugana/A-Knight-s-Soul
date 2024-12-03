@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b1lkp7h5vi7hq"]
+[gd_scene load_steps=17 format=3 uid="uid://b1lkp7h5vi7hq"]
 
 [ext_resource type="Script" path="res://scripts/check_plat.gd" id="1_pho6m"]
 [ext_resource type="Texture2D" uid="uid://qwcf1vwpu4ne" path="res://assets/Lava.png" id="2_kuy1l"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bvts34tdegih0" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin.png" id="6_q058k"]
 [ext_resource type="Texture2D" uid="uid://dg62mgm8rk3t7" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin_gray.png" id="8_kn84m"]
 [ext_resource type="PackedScene" uid="uid://2hugdn38purv" path="res://scenes/Player/camera.tscn" id="11_s8tvx"]
+[ext_resource type="FontFile" uid="uid://dbepmpin73w7n" path="res://assets/fonts/PixelatedEleganceRegular-ovyAA.ttf" id="12_51c74"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jlum"]
 texture = ExtResource("2_kuy1l")
@@ -425,15 +426,31 @@ shape = SubResource("RectangleShape2D_jh18x")
 
 [node name="Players" type="Node" parent="."]
 
-[node name="Player" parent="Players" instance=ExtResource("4_qumse")]
+[node name="Player" parent="Players" node_paths=PackedStringArray("deathLabel") instance=ExtResource("4_qumse")]
 z_index = 20
 position = Vector2(-76, -6)
+deathLabel = NodePath("../../Label")
 
-[node name="player_inverted" parent="Players" instance=ExtResource("5_jm331")]
+[node name="player_inverted" parent="Players" node_paths=PackedStringArray("deathLabel") instance=ExtResource("5_jm331")]
 z_index = 20
 position = Vector2(-76, 44)
+deathLabel = NodePath("../../Label")
 
 [node name="Camera2D" parent="." instance=ExtResource("11_s8tvx")]
 position = Vector2(0, 12)
 player1 = NodePath("../Players/Player")
 player2 = NodePath("../Players/player_inverted")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -103.0
+offset_top = -139.0
+offset_right = 117.0
+offset_bottom = -116.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("12_51c74")
+text = "You Died (Press R to Restart)"

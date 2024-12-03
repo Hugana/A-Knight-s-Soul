@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bqwhn6h0msc3f"]
+[gd_scene load_steps=21 format=3 uid="uid://bqwhn6h0msc3f"]
 
 [ext_resource type="Script" path="res://scripts/check_plat.gd" id="1_uo1iu"]
 [ext_resource type="Texture2D" uid="uid://qwcf1vwpu4ne" path="res://assets/Lava.png" id="2_i2g0f"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://drcb460hrneiu" path="res://scenes/Player/player_inverted.tscn" id="10_eqwvy"]
 [ext_resource type="PackedScene" uid="uid://2hugdn38purv" path="res://scenes/Player/camera.tscn" id="11_843hx"]
 [ext_resource type="Texture2D" uid="uid://daaqc4l1liv64" path="res://assets/Dungeon Tile Set.png" id="12_wa0b7"]
+[ext_resource type="FontFile" uid="uid://dbepmpin73w7n" path="res://assets/fonts/PixelatedEleganceRegular-ovyAA.ttf" id="13_q2lwd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jlum"]
 texture = ExtResource("2_i2g0f")
@@ -720,18 +721,34 @@ shape = SubResource("RectangleShape2D_jh18x")
 
 [node name="Players" type="Node" parent="."]
 
-[node name="Player" parent="Players" instance=ExtResource("9_i2yn8")]
+[node name="Player" parent="Players" node_paths=PackedStringArray("deathLabel") instance=ExtResource("9_i2yn8")]
 z_index = 20
 position = Vector2(-76, -6)
 collision_layer = 15
+deathLabel = NodePath("../../Label")
 
-[node name="player_inverted" parent="Players" instance=ExtResource("10_eqwvy")]
+[node name="player_inverted" parent="Players" node_paths=PackedStringArray("deathLabel") instance=ExtResource("10_eqwvy")]
 z_index = 20
 position = Vector2(7, 91)
 collision_layer = 15
 collision_mask = 15
+deathLabel = NodePath("../../Label")
 
 [node name="Camera2D" parent="." instance=ExtResource("11_843hx")]
 position = Vector2(4, 49)
 player1 = NodePath("../Players/Player")
 player2 = NodePath("../Players/player_inverted")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -103.0
+offset_top = -139.0
+offset_right = 117.0
+offset_bottom = -116.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("13_q2lwd")
+text = "You Died (Press R to Restart)"
