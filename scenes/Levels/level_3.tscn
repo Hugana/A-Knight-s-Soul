@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://oehn3ulhiy8p"]
+[gd_scene load_steps=16 format=3 uid="uid://oehn3ulhiy8p"]
 
 [ext_resource type="Script" path="res://scripts/check_plat.gd" id="1_4vaqi"]
 [ext_resource type="Texture2D" uid="uid://c4h5kl4f03xth" path="res://assets/Dungeon Tile Set Gray.png" id="3_kop6f"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dg62mgm8rk3t7" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin_gray.png" id="9_vpwky"]
 [ext_resource type="PackedScene" uid="uid://dx5i4louu1ayw" path="res://scenes/Player/player.tscn" id="10_r6wfa"]
 [ext_resource type="PackedScene" uid="uid://drcb460hrneiu" path="res://scenes/Player/player_inverted.tscn" id="11_aqga5"]
-[ext_resource type="PackedScene" uid="uid://0ep5o52nbpxh" path="res://scenes/Interact/box.tscn" id="12_ddb0u"]
 [ext_resource type="PackedScene" uid="uid://2hugdn38purv" path="res://scenes/Player/camera.tscn" id="12_q31m0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jlum"]
@@ -437,7 +436,3 @@ position = Vector2(10, 46)
 position = Vector2(-5, 20)
 player1 = NodePath("../Players/Player")
 player2 = NodePath("../Players/player_inverted")
-
-[node name="Box" parent="." instance=ExtResource("12_ddb0u")]
-position = Vector2(-66, -8)
-mass = 0.001

@@ -1,9 +1,7 @@
-res://scenes/Interfaces/main_menu.tscn
-res://scenes/Levels/level_0.tscn
-res://scenes/Levels/level_1.tscn
-res://scenes/Levels/level_2.tscn
+res://scripts/player.gd
 res://scenes/Player/player.tscn
+res://scenes/Levels/level_2.tscn
+res://spikes.tscn
 res://scenes/Player/player_inverted.tscn
 res://scenes/Levels/level_3.tscn
-res://scenes/Player/camera.tscn
-res://scripts/player.gd
+res://scenes/Levels/level_4.tscn

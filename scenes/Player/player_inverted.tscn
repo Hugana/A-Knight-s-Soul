@@ -1,8 +1,24 @@
-[gd_scene load_steps=26 format=3 uid="uid://drcb460hrneiu"]
+[gd_scene load_steps=31 format=3 uid="uid://drcb460hrneiu"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_k0264"]
 [ext_resource type="Texture2D" uid="uid://bh4xdac3t8avx" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/knight_gray.png" id="2_sw4m5"]
 [ext_resource type="PackedScene" uid="uid://cof5tesjbv1gd" path="res://scenes/Player/player_dust.tscn" id="3_1kdbe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q28qt"]
+atlas = ExtResource("2_sw4m5")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gs3p6"]
+atlas = ExtResource("2_sw4m5")
+region = Rect2(32, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iycy4"]
+atlas = ExtResource("2_sw4m5")
+region = Rect2(64, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vo35u"]
+atlas = ExtResource("2_sw4m5")
+region = Rect2(96, 224, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ur8ru"]
 atlas = ExtResource("2_sw4m5")
@@ -88,6 +104,23 @@ region = Rect2(224, 96, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_q28qt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gs3p6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iycy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vo35u")
+}],
+"loop": false,
+"name": &"death",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ur8ru")
 }, {
 "duration": 1.0,
@@ -160,6 +193,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2haad"]
 size = Vector2(8, 12)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vd5q0"]
+size = Vector2(8, 12)
+
 [node name="player_inverted" type="CharacterBody2D" node_paths=PackedStringArray("dust_particles")]
 collision_layer = 2
 collision_mask = 9
@@ -171,8 +207,10 @@ inversion = -1
 z_index = 2
 rotation = 3.14159
 sprite_frames = SubResource("SpriteFrames_k3qeh")
-animation = &"run"
+animation = &"death"
 autoplay = "idle"
+frame = 3
+frame_progress = 1.0
 
 [node name="CPUParticles2D" parent="AnimatedSprite2D" instance=ExtResource("3_1kdbe")]
 z_index = -1
@@ -183,3 +221,13 @@ color = Color(4.42803e-06, 0.955765, 0.938559, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_2haad")
+
+[node name="player_inverted" type="Area2D" parent="."]
+collision_layer = 15
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_inverted"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_vd5q0")
+
+[connection signal="body_entered" from="player_inverted" to="." method="_on_player_inverted_body_entered"]
