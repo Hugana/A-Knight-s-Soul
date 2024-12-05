@@ -297,7 +297,7 @@ collision_mask = 11
 script = ExtResource("1_aea3k")
 dust_particles = NodePath("AnimatedSprite2D/player_dust")
 
-[node name="Jump_Sound" type="AudioStreamPlayer2D" parent="."]
+[node name="audioPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_laaj0")
 volume_db = -10.0
 

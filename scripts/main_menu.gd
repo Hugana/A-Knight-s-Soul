@@ -37,6 +37,10 @@ func _on_load_pressed() -> void:
 		load_next_level("res://scenes/Levels/level_1.tscn")
 	elif(user_input == "2006"):
 		load_next_level("res://scenes/Levels/level_2.tscn")
+	elif(user_input == "2506"):
+		load_next_level("res://scenes/Levels/level_3.tscn")
+	elif(user_input == "koala"):
+		load_next_level("res://scenes/Levels/level_3.tscn")
 		
 
 # Handle Back button press

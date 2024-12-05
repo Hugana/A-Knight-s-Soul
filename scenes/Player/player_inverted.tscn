@@ -203,6 +203,9 @@ script = ExtResource("1_k0264")
 dust_particles = NodePath("AnimatedSprite2D/CPUParticles2D")
 inversion = -1
 
+[node name="audioPlayer" type="AudioStreamPlayer2D" parent="."]
+volume_db = -10.0
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 2
 rotation = 3.14159
