@@ -8,6 +8,8 @@ extends Node2D
 @export var current_scene = "text"
 @onready var coin = $inversion_Coin
 
+const main_menu = "res://scenes/Levels/main_menu.tscn"
+
 var is_in_area1 = false
 var is_in_area2 = false
 
@@ -22,6 +24,10 @@ func _process(delta: float) -> void:
 	plat_part_2.emitting = false
 	if Input.is_action_just_pressed("restart_level"):
 		load_level(current_scene)
+		
+	if Input.is_action_just_pressed("escape"):
+		load_level(main_menu)
+		
 
 	if area_1:  
 		for body in area_1.get_overlapping_bodies():

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://l27w8g8o0uwn"
+path="res://.godot/imported/Winter Wind Sounds 1 Hour High Winds Blowing Snow.mp3-90228a92cc4f66d059e0dcf8247c849e.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Winter Wind Sounds 1 Hour High Winds Blowing Snow.mp3"
+dest_files=["res://.godot/imported/Winter Wind Sounds 1 Hour High Winds Blowing Snow.mp3-90228a92cc4f66d059e0dcf8247c849e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

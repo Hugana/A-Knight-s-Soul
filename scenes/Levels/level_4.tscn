@@ -1,9 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://dox3d3y7hoqxd"]
+[gd_scene load_steps=24 format=3 uid="uid://dox3d3y7hoqxd"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_jm76g"]
 [ext_resource type="Texture2D" uid="uid://daaqc4l1liv64" path="res://assets/Dungeon Tile Set.png" id="2_moobf"]
 [ext_resource type="Texture2D" uid="uid://c4h5kl4f03xth" path="res://assets/Dungeon Tile Set Gray.png" id="3_sh3pq"]
-[ext_resource type="PackedScene" uid="uid://br08jpspexfas" path="res://scenes/Asset_Scenes/torh.tscn" id="4_xb23y"]
 [ext_resource type="Texture2D" uid="uid://dm0ctqorf7csj" path="res://assets/torch.png" id="5_bknu8"]
 [ext_resource type="Texture2D" uid="uid://b50dlwic2tllq" path="res://assets/torch_gray.png" id="6_gk0fm"]
 [ext_resource type="Texture2D" uid="uid://bvts34tdegih0" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin.png" id="7_6fwsj"]
@@ -11,8 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://dg62mgm8rk3t7" path="res://assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/coin_gray.png" id="9_ey6rr"]
 [ext_resource type="PackedScene" uid="uid://dx5i4louu1ayw" path="res://scenes/Player/player.tscn" id="10_ivgqy"]
 [ext_resource type="PackedScene" uid="uid://drcb460hrneiu" path="res://scenes/Player/player_inverted.tscn" id="11_2fcgf"]
+[ext_resource type="PackedScene" uid="uid://bercqso8tpdh5" path="res://FireGPU.tscn" id="11_bsgvi"]
 [ext_resource type="PackedScene" uid="uid://2hugdn38purv" path="res://scenes/Player/camera.tscn" id="12_3qgy8"]
+[ext_resource type="PackedScene" uid="uid://b8vse81q2fuvq" path="res://FireGPU_2.tscn" id="13_epbco"]
 [ext_resource type="FontFile" uid="uid://dbepmpin73w7n" path="res://assets/fonts/PixelatedEleganceRegular-ovyAA.ttf" id="13_lfqs0"]
+[ext_resource type="AudioStream" uid="uid://dsktq46gq1vb3" path="res://assets/music/DARK DUNGEON AMBIENCE 1 HOUR HAND CRAFTED DUNGEON SOUNDSCAPE D&D, STORYTELLING, RELAXING, ASMR.mp3" id="15_ofr5m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jlum"]
 texture = ExtResource("2_moobf")
@@ -625,6 +627,22 @@ sources/1 = SubResource("TileSetAtlasSource_cfy6x")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jh18x"]
 size = Vector2(10, 3)
 
+[sub_resource type="Environment" id="Environment_0144y"]
+background_mode = 3
+tonemap_mode = 3
+glow_enabled = true
+glow_hdr_threshold = 2.0
+fog_mode = 1
+fog_light_energy = 2.41
+fog_sun_scatter = 0.27
+fog_density = 1.0
+fog_sky_affect = 0.305
+fog_height = 2.8
+fog_height_density = 0.02
+fog_depth_curve = 0.129408
+fog_depth_begin = 39.5
+fog_depth_end = 1752.8
+
 [node name="Game" type="Node2D" node_paths=PackedStringArray("area_1", "area_2", "plat_part_1", "plat_part_2")]
 script = ExtResource("1_jm76g")
 area_1 = NodePath("PresurePlates/pressure_1")
@@ -644,48 +662,6 @@ position = Vector2(0, -1)
 tile_set = SubResource("TileSet_agoau")
 format = 2
 layer_0/tile_data = PackedInt32Array(458753, 131073, 14, 458754, 131073, 14, 458755, 196609, 14, 458756, 196609, 14, 458757, 196609, 14, 458758, 393217, 14, 458752, 393217, 14, 524287, 393217, 14, 458759, 327681, 14, 458760, 327681, 14, -393215, 131072, 805306382, -393214, 131072, 805306382, -393213, 262144, 805306382, -393212, 262144, 805306382, -393211, 262144, 805306382, -393210, 262144, 805306382, -393216, 262144, 805306382, -327681, 262144, 805306382, -327682, 262144, 805306382, -327683, 262144, 805306382, -327684, 262144, 805306382, -327685, 262144, 805306382, -327686, 262144, 805306382, -327687, 262144, 805306382, -327688, 262144, 805306382, 524286, 262145, 14, 524285, 262145, 14, 524284, 262145, 14, 524283, 262145, 14, 524282, 262145, 14, 524281, 262145, 14, 524280, 262145, 14, -393209, 262144, 805306382, -393208, 262144, 805306382)
-
-[node name="Torches" type="Node" parent="."]
-
-[node name="Torh_1" parent="Torches" instance=ExtResource("4_xb23y")]
-z_index = 0
-position = Vector2(-123, -39)
-
-[node name="Sprite2D" type="Sprite2D" parent="Torches/Torh_1"]
-texture = ExtResource("5_bknu8")
-offset = Vector2(3, 2.5)
-
-[node name="Torh_2" parent="Torches" instance=ExtResource("4_xb23y")]
-z_index = 0
-position = Vector2(139, -39)
-
-[node name="Sprite2D" type="Sprite2D" parent="Torches/Torh_2"]
-texture = ExtResource("5_bknu8")
-offset = Vector2(-3, 2.5)
-flip_h = true
-
-[node name="Torh_3" parent="Torches" instance=ExtResource("4_xb23y")]
-z_index = 0
-position = Vector2(-123, 68)
-particle_color = Color(0, 1, 0.333333, 1)
-gravity_strength = 600
-
-[node name="Sprite2D" type="Sprite2D" parent="Torches/Torh_3"]
-texture = ExtResource("6_gk0fm")
-offset = Vector2(3, -2)
-flip_v = true
-
-[node name="Torh_4" parent="Torches" instance=ExtResource("4_xb23y")]
-z_index = 0
-position = Vector2(139, 68)
-particle_color = Color(0, 1, 0.333333, 1)
-gravity_strength = 600
-
-[node name="Sprite2D" type="Sprite2D" parent="Torches/Torh_4"]
-texture = ExtResource("6_gk0fm")
-offset = Vector2(-3, -2)
-flip_h = true
-flip_v = true
 
 [node name="PresurePlates" type="Node" parent="."]
 
@@ -777,3 +753,47 @@ size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("13_lfqs0")
 theme_override_font_sizes/font_size = 9
 text = "Lvl code: koala"
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("11_bsgvi")]
+modulate = Color(2, 2, 1, 0.714)
+self_modulate = Color(2, 1, 1, 1)
+position = Vector2(-123, -36)
+
+[node name="Sprite2D" type="Sprite2D" parent="GPUParticles2D"]
+position = Vector2(3, 2)
+texture = ExtResource("5_bknu8")
+
+[node name="GPUParticles2D2" parent="." instance=ExtResource("11_bsgvi")]
+modulate = Color(2, 2, 1, 0.714)
+self_modulate = Color(2, 1, 1, 1)
+position = Vector2(139, -36)
+
+[node name="Sprite2D" type="Sprite2D" parent="GPUParticles2D2"]
+position = Vector2(-3, 2)
+texture = ExtResource("5_bknu8")
+flip_h = true
+
+[node name="GPUParticles2D3" parent="." instance=ExtResource("13_epbco")]
+position = Vector2(-123, 71)
+
+[node name="Sprite2D" type="Sprite2D" parent="GPUParticles2D3"]
+position = Vector2(3, -2)
+texture = ExtResource("6_gk0fm")
+flip_v = true
+
+[node name="GPUParticles2D4" parent="." instance=ExtResource("13_epbco")]
+position = Vector2(139, 70)
+
+[node name="Sprite2D" type="Sprite2D" parent="GPUParticles2D4"]
+position = Vector2(-3, -2)
+texture = ExtResource("6_gk0fm")
+flip_h = true
+flip_v = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0144y")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_ofr5m")
+volume_db = -4.0
+autoplay = true
